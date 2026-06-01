@@ -82,7 +82,8 @@
     .community-photo{position:relative;border-radius:28px;overflow:hidden;min-height:430px;background:#16072F;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.18)}.community-photo img{width:100%;height:100%;min-height:430px;object-fit:cover;display:block}.community-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,7,47,.03),rgba(22,7,47,.42)),radial-gradient(circle at 84% 18%,rgba(250,204,21,.24),transparent 28%)}.community-caption{position:absolute;z-index:2;left:18px;right:18px;bottom:18px;background:rgba(255,255,255,.90);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.72);border-radius:22px;padding:16px 18px;color:#16072F;box-shadow:0 16px 42px rgba(22,7,47,.22)}.community-caption strong{display:block;font-family:'Space Grotesk',Inter,sans-serif;font-size:22px}.community-caption span{display:block;color:#4B5563;font-weight:750;margin-top:3px}.community-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.community-point{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:13px;color:#fff;font-weight:800}.community-point small{display:block;color:#FFF7D6;font-weight:700;margin-top:4px}.section.dark .community-point{color:#fff}@media(max-width:920px){.community-points{grid-template-columns:1fr}.community-photo,.community-photo img{min-height:300px}}
 
 
-    .tutorial{display:flex;flex-direction:column}.tutorial .thumb.youtube-embed{background:#16072F;overflow:hidden;aspect-ratio:16/9;flex:0 0 auto}.tutorial .thumb.youtube-embed iframe{display:block;width:100%;height:100%;border:0}.tutorial .thumb.youtube-embed:fullscreen{width:100vw;height:100vh;aspect-ratio:auto;border-radius:0}.tutorial .thumb.youtube-poster{position:relative;display:block;width:100%;height:auto;aspect-ratio:16/9;flex:0 0 auto;padding:0;border:0;background:#16072F;cursor:pointer;text-align:left;overflow:hidden}.tutorial .thumb.youtube-poster img{width:100%;height:100%;object-fit:cover;display:block}.tutorial .thumb.youtube-poster:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,7,47,0),rgba(22,7,47,.18))}.tutorial .thumb.youtube-poster .play-dot{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.95);color:#7C3AED}.tutorial .thumb.youtube-poster .poster-hint{position:absolute;left:14px;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;max-width:max-content;background:rgba(255,255,255,.94);color:#16072F;border-radius:999px;padding:8px 12px;font-weight:800;box-shadow:0 10px 24px rgba(22,7,47,.2)}.tutorial.is-playing{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);align-items:stretch}.tutorial.is-playing .thumb.youtube-embed{min-height:420px}.tutorial.is-playing .tutorial-body{display:flex;flex-direction:column;justify-content:center}.tutorial.is-playing .tutorial-body .btn{align-self:flex-start}@media(max-width:920px){.tutorial.is-playing{grid-template-columns:1fr}.tutorial.is-playing .thumb.youtube-embed{min-height:auto}}
+    .tutorial{display:flex;flex-direction:column}.tutorial .thumb.youtube-poster{position:relative;display:block;width:100%;height:auto;aspect-ratio:16/9;flex:0 0 auto;padding:0;border:0;background:#16072F;cursor:pointer;text-align:left;overflow:hidden}.tutorial .thumb.youtube-poster img{width:100%;height:100%;object-fit:cover;display:block}.tutorial .thumb.youtube-poster:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,7,47,0),rgba(22,7,47,.18))}.tutorial .thumb.youtube-poster .play-dot{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.95);color:#7C3AED}.tutorial .thumb.youtube-poster .poster-hint{position:absolute;left:14px;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;max-width:max-content;background:rgba(255,255,255,.94);color:#16072F;border-radius:999px;padding:8px 12px;font-weight:800;box-shadow:0 10px 24px rgba(22,7,47,.2)}
+    .video-modal{position:fixed;inset:0;z-index:120;display:none;align-items:center;justify-content:center;background:rgba(9,3,24,.84);padding:24px}.video-modal.open{display:flex}.video-modal-card{width:min(800px,94vw);max-height:92vh;background:#0B0618;border:1px solid rgba(255,255,255,.16);border-radius:24px;box-shadow:0 34px 100px rgba(0,0,0,.45);overflow:hidden}.video-modal-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;background:#16072F;color:#fff}.video-modal-title{font-family:'Space Grotesk',Inter,sans-serif;font-weight:800}.video-modal-close{appearance:none;border:0;border-radius:999px;background:#fff;color:#16072F;width:40px;height:40px;font-size:26px;line-height:1;cursor:pointer}.video-modal-player{aspect-ratio:16/9;background:#000}.video-modal-player iframe{display:block;width:100%;height:100%;border:0}@media(max-width:720px){.video-modal{padding:12px}.video-modal-card{width:100vw;border-radius:18px}.video-modal-head{padding:12px}.video-modal-title{font-size:14px}.video-modal-close{width:38px;height:38px}}
 
 
 
@@ -204,22 +205,36 @@
   <div class="sticky-cta"><span>Nächster Schritt</span><a class="btn primary small" href="#kurse">Tutorials</a><a class="btn secondary small" href="#beratung">Erstgespräch</a></div>
   <footer><div class="wrap"><strong>Studio Zukunft</strong> · Deutschsprachige Onlinekurse für AI, Coding und digitale Kreativität. MVP-Hinweis: Impressum, Datenschutz, AGB, echte Payment-Links, Bildnachweise und echter Telegram-Link vor Veröffentlichung ergänzen.</div></footer>
 
+  <div class="video-modal" id="video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="video-modal-title"><div class="video-modal-card"><div class="video-modal-head"><span class="video-modal-title" id="video-modal-title">YouTube-Video</span><button class="video-modal-close" type="button" aria-label="Video schließen">×</button></div><div class="video-modal-player" id="video-modal-player"></div></div></div>
   <div id="termin-bestaetigung" class="modal"><div class="modal-card"><a class="close" href="#beratung">×</a><span class="mono">Terminbuchung MVP</span><h2>Kalender-Slot ausgewählt</h2><p class="muted">Der sichtbare Kalender ist vorbereitet. Für echte Buchungen wird hier als nächster Schritt ein Calendly-, TidyCal- oder Google-Appointment-Link eingebettet, damit Besucher ohne Mail direkt einen 30-Minuten-Termin reservieren können.</p><a class="btn primary" href="#beratung">Zurück zum Kalender</a></div></div>
   <div id="checkout-comic" class="modal"><div class="modal-card"><a class="close" href="#preise">×</a><span class="mono">Checkout-Prototyp</span><h2>AI-Comic-Held erschaffen</h2><p class="muted">Preis: 5 €. Später führt dieser Button zu Stripe oder PayPal. Aktuell sammelt er Kaufinteresse per Mail.</p><a class="btn primary" href="mailto:info@phil-splash.de?subject=Kaufinteresse%20AI-Comic%20Studio%20Zukunft">Kaufinteresse senden</a></div></div>
   <div id="checkout-scratch" class="modal"><div class="modal-card"><a class="close" href="#preise">×</a><span class="mono">Checkout-Prototyp</span><h2>Scratch-Game bauen</h2><p class="muted">Preis: 5 €. Deutsches Projekt-Tutorial für erste Spiellogik.</p><a class="btn primary" href="mailto:info@phil-splash.de?subject=Kaufinteresse%20Scratch%20Studio%20Zukunft">Kaufinteresse senden</a></div></div>
   <div id="checkout-web" class="modal"><div class="modal-card"><a class="close" href="#preise">×</a><span class="mono">Checkout-Prototyp</span><h2>Eigene Landingpage bauen</h2><p class="muted">Preis: 5 €. Projekt-Tutorial für HTML, CSS und gute Angebotsstruktur.</p><a class="btn primary" href="mailto:info@phil-splash.de?subject=Kaufinteresse%20Landingpage%20Studio%20Zukunft">Kaufinteresse senden</a></div></div>
   <div id="checkout-bundle" class="modal"><div class="modal-card"><a class="close" href="#preise">×</a><span class="mono">Checkout-Prototyp</span><h2>Starter-Bundle</h2><p class="muted">Preis: 19 €. Fünf Tutorials als Einstieg in Creative AI, Coding und Webdesign.</p><a class="btn primary" href="mailto:info@phil-splash.de?subject=Kaufinteresse%20Starter-Bundle%20Studio%20Zukunft">Bundle vormerken</a></div></div>
   <script>
+    const modal = document.getElementById('video-modal');
+    const modalTitle = document.getElementById('video-modal-title');
+    const modalPlayer = document.getElementById('video-modal-player');
+    const closeVideo = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      modalPlayer.innerHTML = '';
+    };
+    document.querySelector('.video-modal-close').addEventListener('click', closeVideo);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeVideo();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('open')) closeVideo();
+    });
     document.querySelectorAll('.youtube-poster').forEach((poster) => {
       poster.addEventListener('click', () => {
         const id = poster.dataset.videoId;
         const title = poster.dataset.title || 'YouTube-Video';
-        const article = poster.closest('.tutorial');
-        const shell = document.createElement('div');
-        shell.className = 'thumb youtube-embed';
-        shell.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1&mute=1&controls=1&fs=1&playsinline=1" title="${title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
-        poster.replaceWith(shell);
-        article.classList.add('is-playing');
+        modalTitle.textContent = title.replace('YouTube-Video: ', '');
+        modalPlayer.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1&mute=1&controls=1&fs=1&playsinline=1" title="${title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
       });
     });
   </script>
