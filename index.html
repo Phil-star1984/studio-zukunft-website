@@ -232,7 +232,7 @@
         const id = poster.dataset.videoId;
         const title = poster.dataset.title || 'YouTube-Video';
         modalTitle.textContent = title.replace('YouTube-Video: ', '');
-        modalPlayer.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1&mute=1&controls=1&fs=1&playsinline=1" title="${title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+        modalPlayer.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&autoplay=1&controls=1&fs=1&playsinline=1" title="${title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
       });
