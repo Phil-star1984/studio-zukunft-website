@@ -48,10 +48,38 @@
     @media(max-width:900px){.navin{height:56px}.brand .mark{width:36px;height:36px}.brand span:last-child{font-size:16px}.nav .btn{min-height:38px;padding:8px 12px;font-size:13px}.hero-grid{padding-top:42px}}
     @media(max-width:480px){.brand span:last-child{max-width:42vw;overflow:hidden;text-overflow:ellipsis}.nav .btn{font-size:12px;padding:7px 10px}}
 
+
+    /* Logo refresh: abstract Zukunft-Z with orbit/star in Purple/Pink/Gold */
+    .mark.logo-mark{
+      background:transparent!important;
+      box-shadow:0 16px 38px rgba(124,58,237,.24);
+      overflow:visible;
+    }
+    .mark.logo-mark:after{display:none!important}
+    .brand-logo-svg{width:42px;height:42px;display:block;filter:drop-shadow(0 8px 18px rgba(22,7,47,.18))}
+    @media(max-width:920px){.brand-logo-svg{width:36px;height:36px}}
+
   </style>
 </head>
 <body>
-  <nav class="nav"><div class="wrap navin"><a class="brand" href="../index.html"><span class="mark">SZ</span><span>Studio Zukunft</span></a><a class="btn secondary" href="../index.html">Zurück zur Startseite</a></div></nav>
+  <nav class="nav"><div class="wrap navin"><a class="brand" href="../index.html"><span class="mark logo-mark"><svg class="brand-logo-svg" viewBox="0 0 64 64" role="img" aria-label="Studio Zukunft Logo" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sz-bg" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="0.58" stop-color="#EC4899"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+    <linearGradient id="sz-z" x1="17" y1="18" x2="47" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF4B8"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#sz-bg)"/>
+  <path d="M18 19.5h28L24.5 44.5H47" fill="none" stroke="url(#sz-z)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 43c9-17 23-25 40-25" fill="none" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="47" cy="17" r="4.2" fill="#FACC15" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M18 15l1.9 4 4.1.6-3 3 0.7 4.2-3.7-2-3.7 2 .7-4.2-3-3 4.1-.6L18 15z" fill="#FFFFFF" fill-opacity="0.9"/>
+</svg></span><span>Studio Zukunft</span></a><a class="btn secondary" href="../index.html">Zurück zur Startseite</a></div></nav>
 
   <header class="hero"><div class="wrap hero-grid"><div><span class="mono">Deutschsprachiges Projekt-Tutorial · MVP-Vorschau</span><h1>AI-Comic-Held erschaffen</h1><p class="lead">Ein kindgerechtes Tutorial für den Einstieg in Creative AI: Kinder entwickeln eine eigene Heldenfigur, schreiben einen guten Prompt, bewerten AI-Bilder kritisch und planen eine kleine Comic-Szene.</p><div class="actions"><a class="btn primary" href="#kaufen">Für 5 € vormerken</a><a class="btn secondary" href="#vorschau">Kostenlose Vorschau ansehen</a></div><div class="facts"><div class="fact"><strong>35 Min.</strong><span class="muted">Lernzeit</span></div><div class="fact"><strong>10–14</strong><span class="muted">Jahre</span></div><div class="fact"><strong>Deutsch</strong><span class="muted">Sprache</span></div><div class="fact"><strong>1 Projekt</strong><span class="muted">Comic-Held</span></div></div></div><aside class="visual"><div class="visual-top"><img src="../assets/ai-comic-tutorial-hero.png" alt="Kinder gestalten in einem futuristischen Kreativstudio einen AI-Comic-Helden"></div><div class="visual-body"><span class="chip">Ergebnis: eigene Figur + Prompt + 3-Panel-Comic-Idee</span><h3 style="margin-top:14px">Was am Ende sichtbar ist</h3><p class="muted">Ein kleines Projekt, das Kinder erklären und weiterentwickeln können – nicht nur ein konsumiertes Video.</p></div></aside></div></header>
 
