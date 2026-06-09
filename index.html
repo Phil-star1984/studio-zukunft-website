@@ -159,6 +159,39 @@
     .brand-logo-svg{width:42px;height:42px;display:block;filter:drop-shadow(0 8px 18px rgba(22,7,47,.18))}
     @media(max-width:920px){.brand-logo-svg{width:36px;height:36px}}
 
+    /* Align main-site navigation with the clearer magazine navigation */
+    .topbar{
+      background:linear-gradient(90deg,#16072F,#7C3AED 54%,#EC4899)!important;
+      color:#fff!important;
+      font-weight:700;
+      font-size:13px;
+      box-shadow:0 8px 24px rgba(22,7,47,.12);
+    }
+    .topbar .wrap{
+      min-height:30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      white-space:nowrap;
+      overflow:hidden;
+    }
+    .topbar strong{color:#FFE68A!important}.topbar a{color:#fff!important;text-decoration:underline;text-underline-offset:3px}
+    .nav{
+      position:sticky;
+      top:30px;
+      z-index:55;
+      background:rgba(255,255,255,.92)!important;
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(221,215,234,.9)!important;
+      box-shadow:0 10px 30px rgba(22,7,47,.08);
+    }
+    .navin{height:62px;gap:18px}
+    .brand{gap:12px;font-weight:900;color:#16072F}.brand span:last-child{font-family:'Space Grotesk',Inter,sans-serif;font-weight:900;letter-spacing:-.02em;color:#16072F}
+    .links{gap:16px;font-weight:750;color:#261A3D}.links a{white-space:nowrap;color:#261A3D}.links a:hover{color:#7C3AED}
+    html{scroll-padding-top:104px}
+
   </style>
 </head>
 <body>
